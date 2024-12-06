@@ -31,7 +31,7 @@
 
                 <!-- Centered Navigation Links -->
                 <ul class="flex space-x-12 hidden md:flex">
-                        <li><a href="#" class="text-white hover:text-[#028ABE] flex items-center"><i class="fa fa-home mr-2"></i> Home</a></li>
+                        <li><a href="/landingpage_customer" class="text-white hover:text-[#028ABE] flex items-center"><i class="fa fa-home mr-2"></i> Home</a></li>
                         <li><a href="/reservation-page" class="text-white hover:text-[#028ABE] flex items-center"><i class="fa fa-calendar-alt mr-2"></i> Reservation</a></li>
                         <li><a href="/about_us-page" class="text-white hover:text-[#028ABE] flex items-center"><i class="fa fa-info-circle mr-2"></i> About Us</a></li>
                 </ul>
@@ -58,6 +58,7 @@
         </nav>
 
 
+
         <!-- Mobile Menu (hidden by default) -->
         <div id="mobileMenu" class="md:hidden fixed inset-0 bg-[#011b33] bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-6 py-8 hidden">
                 <!-- Close Button (X) -->
@@ -77,18 +78,70 @@
         </div>
 
 
-        <section class="relative min-h-screen">
-                <img src="./images/customerbg.png" class="absolute inset-0 w-full h-full object-cover" alt="background">
+        <div class="bg-gray-50 py-10">
+                <div class="text-center mb-10">
+                        <h1 class="text-3xl font-bold text-gray-800">Meet our team</h1>
+                        <p class="text-gray-500 mt-2">Inspiring change, one step at a time.</p>
+                </div>
 
-                <h1 class="text-6xl font-bold absolute left-20 translate-y-[220px] text-[#011B33] drop-shadow-[4px_4px_10px_rgba(0,0,0,0.5)]">
-                        Discover your next <br> great read
-                </h1>
-        </section>
+                <!-- Flex container to center the team member cards -->
+                <div class="flex justify-center gap-7">
+                        <!-- Team Member Card 1 -->
+                        <div class="bg-gray-100 rounded-lg shadow-md p-4 flex flex-col items-center w-80">
+                        <div class="bg-gray-300 w-full h-full rounded-t-lg">
+                                <img src="images/sample.jpg" alt="Team Member Photo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="mt-4 text-center">
+                                <h2 class="text-[#011B33] text-lg font-bold">Althea Amor J. Asis</h2>
+                                <p class="text-sm text-gray-500">Personal Manager</p>
+                        </div>
+                </div>
 
-        
+                <!-- Team Member Card 2 -->
+                <div class="bg-gray-100 rounded-lg shadow-md p-4 flex flex-col items-center w-80">
+                        <div class="bg-gray-300 w-full h-full rounded-t-lg">
+                                <img src="images/sample.jpg" alt="Team Member Photo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="mt-4 text-center">
+                                <h2 class="text-[#011B33] text-lg font-bold">Althea Amor J. Asis</h2>
+                                <p class="text-sm text-gray-500">Personal Manager</p>
+                        </div>
+                </div>
+
+                <!-- Team Member Card 3 -->
+                <div class="bg-gray-100 rounded-lg shadow-md p-4 flex flex-col items-center w-80">
+                        <div class="bg-gray-300 w-full h-full rounded-t-lg">
+                                <img src="images/sample.jpg" alt="Team Member Photo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="mt-4 text-center">
+                                <h2 class="text-[#011B33] text-lg font-bold">Althea Amor J. Asis</h2>
+                                <p class="text-sm text-gray-500">Personal Manager</p>
+                        </div>
+                </div>
+
+                <!-- Team Member Card 4 -->
+                <div class="bg-gray-100 rounded-lg shadow-md p-4 flex flex-col items-center w-80">
+                        <div class="bg-gray-300 w-full h-full rounded-t-lg">
+                                <img src="images/sample.jpg" alt="Team Member Photo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="mt-4 text-center">
+                                <h2 class="text-[#011B33] text-lg font-bold">Althea Amor J. Asis</h2>
+                                <p class="text-sm text-gray-500">Personal Manager</p>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="text-center mt-10">
+                        <p class="text-lg text-[#011B33]">
+                        Novella is your community's gateway to knowledge and inspiration. <br>
+                        As a public library, we offer a vast collection of books, journals, and digital resources. <br>
+                        Our dedicated staff is committed to providing exceptional service and fostering a love of learning.
+                        </p>
+                </div>
+        </div>
 
 
-         <!-- Footer -->
+        <!-- Footer -->
         <footer class="flex flex-col md:flex-row justify-between items-start md:items-center px-8 md:px-16 lg:px-60 py-8 bg-[#011b33] text-white text-sm space-y-6 md:space-y-0">
                 <!-- Left Section: Logo and Contact Information -->
                 <div class="flex flex-col md:flex-row md:items-center space-y-6 md:space-y-0 md:space-x-9">
