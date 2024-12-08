@@ -6,6 +6,7 @@
     <title>Novella Sign-Up</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
 <body class="bg-[#E4ECFF] font-poppins">
@@ -90,9 +91,9 @@
                             
                             <!-- Toggle Icon -->
                             <span 
-                                class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500 hover:text-gray-700" 
-                                onclick="togglePassword('password')">
-                                <img id="passwordIcon" src="images/show-password.png" class="h-5 w-5">
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#011B33]" 
+                                onclick="togglePassword('password', 'passwordIcon')">
+                                <i id="passwordIcon" class="fas fa-eye-slash"></i>
                             </span>
                         </div>
                         <p class="text-red-500 text-sm mt-1 hidden" id="passwordError">Password is required.</p>
@@ -114,13 +115,14 @@
 
                             <!-- Toggle Icon for Confirm Password -->
                             <span 
-                                class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500 hover:text-gray-700" 
-                                onclick="togglePassword('confirmPassword')">
-                                <img id="confirmPasswordIcon" src="images/show-password.png" class="h-5 w-5">
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer text-[#011B33]" 
+                                onclick="togglePassword('confirmPassword', 'confirmPasswordIcon')">
+                                <i id="confirmPasswordIcon" class="fas fa-eye-slash"></i>
                             </span>
                         </div>
                         <p class="text-red-500 text-sm mt-1 hidden" id="confirmPasswordError">Passwords do not match.</p>
                     </div>
+
 
                     <!-- General Error -->
                     <div id="formErrorMessage" class="text-red-500 text-sm hidden">
@@ -151,21 +153,24 @@
     <script>
 
         // Toggle password visibility
-            function togglePassword(fieldId) {
-            const field = document.getElementById(fieldId);
-            const icon = document.getElementById(fieldId + 'Icon');
+        function togglePassword(fieldId, iconId) {
+        const field = document.getElementById(fieldId);
+        const icon = document.getElementById(iconId);
 
-            // Toggle the password field type
-            const isPassword = field.type === "password";
-            field.type = isPassword ? "text" : "password";
+        // Toggle the password field type
+        const isPassword = field.type === "password";
+        field.type = isPassword ? "text" : "password";
 
-            // Toggle the icon
-            if (isPassword) {
-                icon.src = "images/hide-password.png"; // Replace with the path to your "hide" icon
-            } else {
-                icon.src = "images/show-password.png"; // Replace with the path to your "show" icon
-            }
+        // Toggle the icon (using Font Awesome)
+        if (icon.classList.contains("fa-eye")) { 
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        } else {
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
         }
+    }
+
 
         // Real-time input validation (optional)
                 document.querySelectorAll("#signupForm input").forEach(input => {
